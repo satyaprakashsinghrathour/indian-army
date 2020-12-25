@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>airforce</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" type="text/css" href="task2.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stachpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
+        integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
+        crossorigin="anonymous"></script>
+
+    <style>
+        footer {
+            background: url("data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDABwTFRgVERwYFhgfHRwhKUUtKSYmKVQ8QDJFZFhpZ2JYYF9ufJ6GbnWWd19giruLlqOpsbOxa4TC0MGszp6usar/2wBDAR0fHykkKVEtLVGqcmByqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqr/wAARCACHALQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCrRTiKSu84htFLRigBtLRS0AFKKSloAcKWminA0gDFFOpMUANoFOxRigBRTsU0CpAKQyMimEVYK1E60JgQmmmnsKYaoQwmmk05qjNMYoNFIKKALlGKWipENIpKfSEUANpKWimAlFBpKAFpQabS5oAkVqeKhBpwNICXFGKQNTgaQwAp4FICKcCKTAdjio5FqYEU2TGKSGU2FRmpn61C1WiSNqjNSGmGqGIKKBRQBcoopKkQtITRmkJoAKSimmmAuaKbmjNAC0ZpM0maAH5pQ1RZo3UAThqeGqtupQ9FgLO+l31W30u6lYCyJKcXyKqhqcHpWGPeoiKfuzTTTQiMimEVKaYaYDAKKeBRTGTGkJpTTTUiDNJRRTASkpaKAEpKdSYoAbRSkUmKYCGkp2KQigYlGaKSgBc0uabRQA8GnA1GDSg0ASZpc0wGlpCFzTSaQmkzTAdmimZooGWTikIpKKkQUlLRTASiiigBKKWkoAKSiigBDSUtFMBuKTFPpKBjaSnYoxQA2lpcUYoABThSAUuKBDWplSGmYoGFFLiigCeiilpCEopaKAEoxS0UgEpKdRTAbikxT8UYoAZikxUmKTFADMUYp+KMUAR4oxUmKTFADMUoFOxS4oATFGKdSUAMIpuKkNNzQAmKKUGigCSilxRikAlFLiigAoopcUAGKMUtKKAG4pcU4U4YpDI8UbamCg0uwUXAg20m2rGymlKLgQYoxUpWk20xEeKKeVppFACGmk0EmmE0wAtTC1ITTCaYx4aimUUBY0dlL5dR5pd1QBJ5VHkmmhz604SH1pagHkt6UnlN6U8Sn1pfOPrRqGhF5Z9KNhqbzTR5h9qLsCHaaADU27PYUfhRcCICnjNOx7UhFACg0ZphzTSTRYCTIppIqMk0hNFgHEimE00mm1VhCnmo2U0+imBAymmkVOaYRTGR4oqSigLk+KWiipEFLRRQAUuaKKAFzSg0UUgHA08Giikxki04AHtRRUsoayComUUUU0JjGwKjJFFFUiRhpKKKoAooooAKMUUUAAWiiikOx//Z");
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: absolute;
+            color: azure;
+            width: 100vw;
+            height: auto;
+
+        }
+
+        .social {
+            padding: 0;
+        }
+
+        .social li {
+            display: inline-block;
+            background-color: azure;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            padding: 0cm;
+
+        }
+
+        .social li a i {
+            padding-top: 4px;
+            color: #333;
+            transition: .3s;
+            font-size: 25px;
+
+        }
+
+        .social li a i:hover {
+            color: rgb(30, 118, 226);
+
+        }
+
+        .footer .link ul {
+            list-style-type: none;
+
+        }
+
+        .footer .link li a {
+            color: #fff;
+            transition: color 0.2;
+
+        }
+
+        .footer .link li a:hover {
+            text-decoration: none;
+            color: rgb(30, 118, 226);
+
+        }
+
+        .footer .location i {
+            font-size: 18px;
+
+        }
+
+        .footer .copyright p {
+            font-size: 1.3rem;
+            text-shadow: 1px 1px black;
+            border-top: rgba(255, 255, 255, 0.7);
+
+            border-bottom: rgba(255, 255, 255, 0.7);
+        }
+
+        .ticker {
+            padding: 5px;
+            margin-left: 300px;
+            margin-right: 100px;
+            margin-top: 0;
+            margin-bottom: 0;
+            border: none;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!--navbar-->
+    <div class="sticky-section">
+        <nav id="nav1" class="navbar navbar-expand-lg navbar-light bg-light ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Armed_forces_logo.png/150px-Armed_forces_logo.png"
+                        width="90px" height="60px" alt="Loading..."></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        &nbsp;
+                        &nbsp;&nbsp;&nbsp; 
+                        <li class="nav-item">
+
+                            <a class="nav-link   " aria-current="page" href="#"> <b> Home </b></b></a>
+                        </li> &nbsp;&nbsp;&nbsp; 
+                        <li class="nav-item">
+
+                            <a class="nav-link " href="C:\Users\satya prakash\Desktop\jscript\task2\indianarmy.html">
+                                <b> Indian army </b></a>
+                        </li> &nbsp;&nbsp;&nbsp; 
+                        <a class="nav-link active" href="C:\Users\satya prakash\Desktop\jscript\task2\airforce.html"> <b>
+                                Air
+                                Force </b></a>
+                        </li> &nbsp;&nbsp;&nbsp; 
+                        <a class="nav-link " href="C:\Users\satya prakash\Desktop\jscript\task2\navy.html"> <b>
+                                Indian
+                                Navy </b> </a>
+                        </li> &nbsp;&nbsp;&nbsp; 
+                        <a class="nav-link " href="C:\Users\satya prakash\Desktop\jscript\task2\photo.html">
+                            <b>
+                                Gallary </b></a>
+                        </li>
+
+                        &nbsp;&nbsp;&nbsp; 
+                        <a class="nav-link " href="C:\Users\satya prakash\Desktop\jscript\essential\contantme.html"> <b>
+                                Contact</b></a>
+                        </li> &nbsp;&nbsp;&nbsp; 
+                        <a class="nav-link " href="C:\Users\satya prakash\Desktop\jscript\task2\whythis.html"> <b>
+                            Why this </b></a>
+                    </li> &nbsp;&nbsp;&nbsp;
+
+                        <a class="nav-link " href="C:\Users\satya prakash\Desktop\jscript\task2\aboutarmy.html"> <b>
+                                About </b></a>
+                        </li> &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+
+
+                        <li class="nav-item ">
+
+                            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"><b> Army
+                                    Candidate</a>
+                        </li> &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                    </ul>
+                    
+
+                </div>
+
+            </div>
+
+
+        </nav>
+    </div>
+    <!--navbar-->
+    <br>
+    <br>
+
+    <div class="container">
+        <div class="ticker">
+            <div class="news">
+                <marquee direction="left" behavior="scroll" scrollamount="15" >
+                    <p style="font-size: 40px;" >
+                        &nbsp;<b><i>   INDIAN AIR FORCE   </i></b> </p>
+
+                </marquee>
+            </div>
+        </div>
+    </div>
+    <br>
+<!--------------------------------------carousel---------------------------------------------------->
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="2000">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://th.bing.com/th/id/OIP.O6jc_tjR0LnjHBqeXdrkdgHaFj?w=229&h=180&c=7&o=5&dpr=1.25&pid=1.7"
+                    class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="https://th.bing.com/th/id/OIP.a15C9UwA1R0fq5VDvf3LnQHaEn?w=226&h=180&c=7&o=5&dpr=1.25&pid=1.7"
+                    class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="https://th.bing.com/th/id/OIP.I6H3TxTBWr_WsNg0Rzj0JAHaEr?w=261&h=184&c=7&o=5&dpr=1.25&pid=1.7"
+                    class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="https://th.bing.com/th/id/OIP.MO3nxdl39ArSGrI4ah99VgHaEn?w=273&h=180&c=7&o=5&dpr=1.25&pid=1.7"
+                    class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+    <!--------------------------------------carousel---------------------------------------------------->
+    <!--------------------------------------main content---------------------------------------------------->
+
+    <div class="row">
+        <div class="col-4">
+            <div class="list-group" id="list-tab" role="tablist">
+                <a class="list-group-item list-group-item-action bg-primary " id="list-home-list" data-bs-toggle="list"
+                    href="#list-home" role="tab" aria-controls="home">History</a>
+                <a class="list-group-item list-group-item-action bg-danger " id="list-home-list" data-bs-toggle="list"
+                    href="#list-generals" role="tab" aria-controls="home">Generals of AIR fORCE </a>
+
+                <a class="list-group-item list-group-item-action bg-secondry" id="list-profile-list"
+                    data-bs-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Task</a>
+                <a class="list-group-item list-group-item-action bg-warning" id="list-messages-list"
+                    data-bs-toggle="list" href="#list-messages" role="tab" aria-controls="messages">ConflictS 
+                    </a>
+            </div>
+        </div>
+        <div class="col-8">
+            <div class="tab-content" id="nav-tabContent">
+
+
+                <div class="tab-pane fade show active " id="list-home" role="tabpanel" aria-labelledby="list-home-list">
+
+                    <br><br><br>
+                    <h2>Ancient History</h2>
+                    <p>
+                        Main article: History of the Indian Air Force
+See also: List of historical aircraft of the Indian Air Force
+Formation and early pilots
+
+A Westland Wapiti, one of the first aircraft of the Indian Air Force.
+The Indian Air Force was established on 8 October 1932 in British India as an auxiliary air force[20] of the Royal Air Force. The enactment of the Indian Air Force Act 1932[21][22] stipulated out their auxiliary status and enforced the adoption of the Royal Air Force uniforms, badges, brevets and insignia.[23] On 1 April 1933, the IAF commissioned its first squadron, No.1 Squadron, with four Westland Wapiti biplanes and five Indian pilots. The Indian pilots were led by British RAF Commanding officer Flight Lieutenant (later Air Vice Marshal) Cecil Bouchier.[24] <br>
+                       
+                    </p>
+                    <p>
+                        The armies of the native tribes were made up mostly of foot-soldiers, later come to be known as
+                        the infantry. The bow and arrow were their principal weapons. Cavalry was non-existent as horses
+                        . So the infantry continued to be relied upon as the decisive weapon of war.
+                        Warriors were the most honoured and leading classes of society.
+                    </p>
+                </div>
+
+                                <div class="tab-pane fade show active " id="list-generals" role="tabpanel"
+                    aria-labelledby="list-home-list">
+
+                    <br><br><br>
+                    <h2>Generals of Air Force</h2>
+                    <ul>
+                        
+                        <li>Bipin Ravat</li>
+                        <li>Om Prakash Malhotra</li>
+                        <li>Deepak Kapoor</li>
+                        <li>Bikram Singh</li>
+                        <li>Manoj Mukund Naravane</li>
+                        <p>For More</p><a href="https://byjus.com/free-ias-prep/chief-of-army-staff-coas-india/#:~:text=List%20of%20Indian%20Army%20Generals%20%E2%80%93%20Chief%20of,Lancers%20%28Gardner%E2%80%99s%20Horse%29%20%2015%20more%20rows%20">Click Me!</a>
+                 </ul>
+ 
+
+
+                </div>
+
+
+                <div class="tab-pane fade show active" id="list-profile" role="tabpanel"
+                    aria-labelledby="list-profile-list">
+                    <br><br><br>
+                    <h2>Task</h2>
+                    <p>
+                        1.War Fighting to meet External Aggression. <br>
+                        2.Internal Security Management to include Internal Threats. <br>
+                        3.Force Projection. <br>
+                        4.Peace Keeping Operations or Military Assistance to friendly foreign countries. <br>
+                        5.Render Humanitarian Assistance, Disaster Relief and Aid to Civil Authorities. <br>
+                    </p>
+
+                </div>
+                <div class="tab-pane fade show active" id="list-messages" role="tabpanel"
+                    aria-labelledby="list-messages-list">
+                    <br><br><br>
+                    <h2>Conflict Resolutions And Operations</h2>
+                    <p>
+                    <ol>
+                        <li>
+                            First Kashmir War (1947)
+
+                            Main articles: Indo-Pakistani War of 1947 and Kashmir conflict
+                            Immediately after independence, tensions between India and Pakistan erupted into the first
+                            of three full-scale wars between the two nations over the then princely state of Kashmir.
+                            The Maharaja of Kashmir wanted to have a standstill position. Since Kashmir was a Muslim
+                           ther. Pakistan suffered significant losses. Its forces were stopped on the
+                            line formed which is now called the Line of Control (LOC).[citation needed]
+
+                            An uneasy peace, sponsored by the UN, returned by the end of 1948, with Indian and Pakistani
+                            refused to pull back, and there could be no further
+                            dialogue on fulfilling the UN resolution.[34][33] Tensions between India and Pakistan,
+                            largely over Kashmir, have never been entirely eliminated.
+                        </li>
+                        <li>
+                            Kargil war (1999)
+
+                            Main article: Kargil War
+                            In 1998, India carried out nuclear tests; and a few days later, Pakistan responded with
+                            nuclear tests of its own, giving both countries nuclear deterrence capability, although
+                           winter and were to be reoccupied in spring. The troops
+                            that took control of these areas received important support, of both arms and supplies, from
+                            Pakistan. Some of the heights under their control, which also included the Tiger Hill,
+                            overlooked the vital Srinagar–Leh Highway (NH 1A), Batalik, and Dras.
+                        </li>
+                        <li>
+                            Indo-Pakistani War of 1965
+
+                            Main article: Indo-Pakistani War of 1965
+                            A second confrontation with Pakistan took place in 1965. Although the war is described as
+                            inconclusive, India had the better of the war and was the clear winner in tactical and
+                            n sector. In retaliation, the Indian Army launched
+                            a major offensive all along its border with Pakistan, with Lahore as its prime target.
+                            <br>
+                        </li>
+                        <li>
+                            Kargil war (1999)
+
+                            Main article: Kargil War
+                            <br>
+                            In 1998, India carried out nuclear tests; and a few days later, Pakistan responded with
+                            nuclear tests of its own, giving both countries nuclear deterrence capability, although
+                            India had tested a hydrogen bomb, which Pakistan lacked. Diplomatic tensions eased after the
+                           s received important support, of both arms and supplies, from
+                            Pakistan. Some of the heights under their control, which also included the Tiger Hill,
+                            overlooked the vital Srinagar–Leh Highway (NH 1A), Batalik, and Dras.
+                        </li>
+                        <li><br>
+                            <b><u><i> 2016 Surgical Strikes on Kashmir</i></u></b> and the 2016–2018 India-Pakistan
+                            conflict
+
+                            Main article: India–Pakistan border skirmishes (2016–2018)
+                            On 18 September 2016, a fedayeen attack was made by four armed militants on an army base
+                            near the town of Uri. Nineteen Indian Army soldiers were killed. India accused
+                            Jaish-e-Muhammad, a Pakista was released to the Indian media on 27 June
+                            2018 as proof of the strike.[83][84][85] The incident triggered the 2016–2018 India-Pakistan
+                            border conflict, which ended on 16 June 2018 with both India and Pakistan agreeing on a
+                            ceasefire.[86][87]
+                            <br>
+                        </li><br><br>
+
+                        <li>For more <a href="https://en.wikipedia.org/wiki/Indian_Army"><button class="btn-info">Click
+                                    Me!</button></a></li>
+                    </ol>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!--------------------------------------main content---------------------------------------------------->
+    <br><br><br>
+    <hr>
+    <div class="row" style="padding-left: 50px;">&emsp;&emsp;
+        <iframe width="300" height="315" src="https://www.youtube.com/embed/l7ndIu-fopM" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        &emsp;&emsp;&emsp;&emsp;
+        <iframe width="300" height="315" src="https://www.youtube.com/embed/pFR4oF6T4V0" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        &emsp;&emsp;&emsp;&emsp;
+        <iframe width="300" height="315" src="https://www.youtube.com/embed/3Xj1gNlZg5g" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        &emsp;&emsp;&emsp;&emsp;
+        <iframe width="300" height="315" src="https://www.youtube.com/embed/XYJjP9-TI_U" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+    </div>
+    <hr>
+
+    <!--pagination-->
+    <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-center">
+            <li class="page-item disabled">
+                <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+            </li>
+            <li class="page-item"><a class="page-link"
+                    href="C:\Users\satya prakash\Desktop\jscript\task2\task2.html">1</a></li>
+            <li class="page-item"><a class="page-link"
+                    href="C:\Users\satya prakash\Desktop\jscript\task2\indianarmy.html">2</a></li>
+            <li class="page-item"><a class="page-link"
+                    href="C:\Users\satya prakash\Desktop\jscript\task2\airforce.html">3</a></li>
+            <li class="page-item"><a class="page-link"
+                    href="C:\Users\satya prakash\Desktop\jscript\task2\navy.html">4</a></li>
+
+            <li class="page-item">
+                <a class="page-link" href="#">Next</a>
+            </li>
+        </ul>
+    </nav>
+    <!--pagination-->
+    <footer>
+
+        <div class="container ">
+            <div class="row gx-10">
+                <div class="col">
+                    <div class="col-lg5 col-xs-12">
+                        <br>
+                        <img src="C:\Users\satya prakash\Desktop\jscript\task2\army gallary\1.jfif" alt="">
+
+
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="col-lg5 col-xs-12">
+                        <br>
+                        <p class="pr-5 text-black-50">
+                        <h3>Join Us</h3>
+                        </p>
+                        <ul class="social">
+                            <li><a href="https://www.facebook.com/vishaljethva1234/"><i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="https://youtube.com/channel/UCZl3bgyRrKKJXXIWW0GreUg"><i
+                                        class="fa fa-youtube"></i></a></li>
+                            <li><a href="#"><i class="fa fa-github"></i></a></li>
+                        </ul>
+                    </div>
+                </div>&emsp;&emsp;&emsp;
+                <div class="col">
+                    <div class="col-lg-3 col-xs-12 links"><br>
+                        <h3 class="mt-lg-0 mt-sm-3 ">Quick Links</h3>
+                        <ul class="m-0 p-0">
+                            <li><a class="btn-primary" href="https://indianarmy.nic.in/home">Source </a></li>
+                            <li><a class="btn-secondary" href="https://indianarmy.nic.in/home">Idea </a></li>
+
+
+                        </ul>
+                    </div>
+                </div>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                <div class="col">
+                    <div class="col-lg-4 col-xs-12 location">
+                        <h4 class="mt-lg-0 mt-sm-4"> &nbsp; Location</h4>
+                        <p><i class="fa fa-map-marker"> &nbsp; anuppur</i></p>
+                        <p><i class="fa fa-phone"> &nbsp; 9754164593</i></p>
+                        <p><i class="fa fa-envelope-o"> &nbsp; leohack@Gmail.com</i></p>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!--for crousel-->
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: jQuery, Popper.js, and Bootstrap JS
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+    -->
+
+    <!--for crousel-->
+
+</body>
+
+</html>

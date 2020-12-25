@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="task2.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script src="https://stachpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
+        integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
+        crossorigin="anonymous"></script>
+    <!-- ----------------------for social icons------------------------------------------->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-------------------------for social icons------------------------------------------->
+
+    <title>About</title>
+    <style>
+        footer {
+            background: url("data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDABwTFRgVERwYFhgfHRwhKUUtKSYmKVQ8QDJFZFhpZ2JYYF9ufJ6GbnWWd19giruLlqOpsbOxa4TC0MGszp6usar/2wBDAR0fHykkKVEtLVGqcmByqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqr/wAARCACHALQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCrRTiKSu84htFLRigBtLRS0AFKKSloAcKWminA0gDFFOpMUANoFOxRigBRTsU0CpAKQyMimEVYK1E60JgQmmmnsKYaoQwmmk05qjNMYoNFIKKALlGKWipENIpKfSEUANpKWimAlFBpKAFpQabS5oAkVqeKhBpwNICXFGKQNTgaQwAp4FICKcCKTAdjio5FqYEU2TGKSGU2FRmpn61C1WiSNqjNSGmGqGIKKBRQBcoopKkQtITRmkJoAKSimmmAuaKbmjNAC0ZpM0maAH5pQ1RZo3UAThqeGqtupQ9FgLO+l31W30u6lYCyJKcXyKqhqcHpWGPeoiKfuzTTTQiMimEVKaYaYDAKKeBRTGTGkJpTTTUiDNJRRTASkpaKAEpKdSYoAbRSkUmKYCGkp2KQigYlGaKSgBc0uabRQA8GnA1GDSg0ASZpc0wGlpCFzTSaQmkzTAdmimZooGWTikIpKKkQUlLRTASiiigBKKWkoAKSiigBDSUtFMBuKTFPpKBjaSnYoxQA2lpcUYoABThSAUuKBDWplSGmYoGFFLiigCeiilpCEopaKAEoxS0UgEpKdRTAbikxT8UYoAZikxUmKTFADMUYp+KMUAR4oxUmKTFADMUoFOxS4oATFGKdSUAMIpuKkNNzQAmKKUGigCSilxRikAlFLiigAoopcUAGKMUtKKAG4pcU4U4YpDI8UbamCg0uwUXAg20m2rGymlKLgQYoxUpWk20xEeKKeVppFACGmk0EmmE0wAtTC1ITTCaYx4aimUUBY0dlL5dR5pd1QBJ5VHkmmhz604SH1pagHkt6UnlN6U8Sn1pfOPrRqGhF5Z9KNhqbzTR5h9qLsCHaaADU27PYUfhRcCICnjNOx7UhFACg0ZphzTSTRYCTIppIqMk0hNFgHEimE00mm1VhCnmo2U0+imBAymmkVOaYRTGR4oqSigLk+KWiipEFLRRQAUuaKKAFzSg0UUgHA08Giikxki04AHtRRUsoayComUUUU0JjGwKjJFFFUiRhpKKKoAooooAKMUUUAAWiiikOx//Z");
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: absolute;
+            color: azure;
+            width: 100vw;
+            height: auto;
+
+        }
+
+        .social {
+            padding: 0;
+        }
+
+        .social li {
+            display: inline-block;
+            background-color: azure;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            padding: 0cm;
+
+        }
+
+        .social li a i {
+            padding-top: 4px;
+            color: #333;
+            transition: .3s;
+            font-size: 25px;
+
+        }
+
+        .social li a i:hover {
+            color: rgb(30, 118, 226);
+
+        }
+
+        .footer .link ul {
+            list-style-type: none;
+
+        }
+
+        .footer .link li a {
+            color: #fff;
+            transition: color 0.2;
+
+        }
+
+        .footer .link li a:hover {
+            text-decoration: none;
+            color: rgb(30, 118, 226);
+
+        }
+
+        .footer .location i {
+            font-size: 18px;
+
+        }
+
+        .footer .copyright p {
+            font-size: 1.3rem;
+            text-shadow: 1px 1px black;
+            border-top: rgba(255, 255, 255, 0.7);
+
+            border-bottom: rgba(255, 255, 255, 0.7);
+        }
+
+
+        .p-4:hover {
+            color: blue;
+
+        }
+
+        * {
+            margin: 0;
+            padding: 0%;
+
+        }
+
+        body {
+            font-family: 'raleway', sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            color: #777;
+
+        }
+
+        h1 {
+            font-size: 36px;
+            color: #555;
+            font-weight: bold;
+
+        }
+
+        h5 {
+            font-size: 24px;
+            color: #333;
+            font-weight: bold;
+
+        }
+
+        #team img {
+            margin-top: -50px;
+
+
+        }
+
+        #team i {
+            font-size: 26px;
+            color: #555;
+
+        }
+
+        #team p {
+            font-weight: 500;
+
+        }
+
+        #team .card {
+            border-radius: 10px;
+            box-shadow: 5px 5px 15px #e74c3c;
+            transition: all 0.3s;
+            -webkit-webkit: all 0.3s ease-in;
+            -moz-webkit: all 0.3s ease-in;
+        }
+
+        #team .card:hover {
+            background: #e74c3c;
+            color: #fff;
+            border-radius: 5px;
+            border: none;
+            box-shadow: 5px 5px 15px #9e9e9e;
+
+        }
+
+        .fa:hover {
+            color: blue;
+        }
+
+        #team .card:hover h5,
+        #team .card:hover i {
+            color: blue;
+
+        }
+
+        .card {
+            margin: 0 auto;
+            /* Added */
+            float: none;
+            /* Added */
+            margin-bottom: 10px;
+            /* Added */
+        }
+    </style>
+
+</head>
+
+<body>
+    <!--navbar-->
+    <div class="sticky-section">
+        <nav id="nav1" class="navbar navbar-expand-lg navbar-light bg-light ">
+            <div class="container-fluid">
+                <a class="navbar-brand"
+                    href="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Armed_forces_logo.png/150px-Armed_forces_logo.png"><img
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Armed_forces_logo.png/150px-Armed_forces_logo.png"
+                        width="90px" height="60px" alt="Loading..."></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        &nbsp;
+                        &nbsp;&nbsp;
+                        <li class="nav-item">
+
+                            <a class="nav-link  " aria-current="page"
+                                href="C:\Users\satya prakash\Desktop\jscript\task2\task2.html"> <b> Home </b></a>
+                        </li> &nbsp;&nbsp;
+                        <li class="nav-item">
+
+                            <a class="nav-link " href="C:\Users\satya prakash\Desktop\jscript\task2\indianarmy.html">
+                                <b> Indian army </b></a>
+                        </li> &nbsp;&nbsp;
+                        <a class="nav-link " href="C:\Users\satya prakash\Desktop\jscript\task2\airforce.html"> <b>
+                                Air
+                                Force </b></a>
+                        </li> &nbsp;&nbsp;
+                        <a class="nav-link " href="C:\Users\satya prakash\Desktop\jscript\task2\navy.html"> <b>
+                                Indian
+                                Navy </b> </a>
+                        </li> &nbsp;&nbsp;
+                        <a class="nav-link " href="C:\Users\satya prakash\Desktop\jscript\task2\armygallary.html">
+                            <b>
+                                Gallary </b></a>
+                        </li>
+
+                        &nbsp;&nbsp;
+                        <a class="nav-link " href="C:\Users\satya prakash\Desktop\jscript\task2\contantme.html"> <b> Contact</b></a>
+                        </li> &nbsp;&nbsp;
+                        <a class="nav-link " href="C:\Users\satya prakash\Desktop\jscript\task2\whythis.html">
+                            <b>
+                                WhyThis </b></a>
+                        </li>
+                        <a class="nav-link  active" href="#"> <b> About </b></a>
+                        </li> &nbsp;&nbsp;
+
+                        <li class="nav-item ">
+
+                            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"><b> Army
+                                    Candidate</a>
+                        </li> &nbsp;&nbsp;
+                    </ul>
+                    
+
+
+                </div>
+            </div>
+
+
+        </nav>
+    </div>
+    <!--navbar-->
+    <section id="team">
+        <div class="row">
+            <div class="col-sm-3"> </div>
+            <div class="col-sm-6">
+                <div class="container my-3 py-3 justify-text-conter  " style="width: fit-content;">
+                    <div class="row mb-5">
+
+                        <div class="col-xs-6 ">
+                            <marquee behavior="slide" direction="left" scrollamount="20" >
+                                <pre><h1 class="text-center  " style="font-size: 60px; color: black; " >ABOUT US  </h1> </pre>
+                            </marquee>
+                            
+                                <p class="mt-3 mr-5 " style="color: black;">
+                                    Lorem ipsum, or lipsum as it is sometimesLorem ipsum, or lipsum as it is sometimes ...
+
+
+                                </p>
+                                 </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-12  ">
+                            <div class="card text-center" style="width: fit-content;">
+                                <div class="card-body">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/INS_Vikramaditya_in_Baltic_Sea.jpg/330px-INS_Vikramaditya_in_Baltic_Sea.jpg"
+                                        width="400px" height="200px" class="img-fluid rounded-circle text-center " style="z-index: 10;"
+                                        alt="">
+                                    <br><br>
+                                    <h1 class="text-center" style="color: black;">Satya P.</h1>
+                                    <h3 class="text-center " style="color: black;">Website Designer</h3>
+                                    <p class="text-center" style="color: black;">Always ready to help you !!!</p>
+                                    <div class="d-flex flex-row justifycontent-center">
+                                        <div class="p-4">
+                                            <a href=""></a>
+                                            <i class="fa fa-facebook" style="font-size: 40px;"></i>
+                                        </div>
+                                        <div class="p-4">
+                                            <a href=""></a>
+                                            <i class="fa fa-twitter" style="font-size: 40px;  "></i>
+                                        </div>
+                                        <div class="p-4">
+                                            <a href=""></a>
+                                            <i class="fa fa-instagram" style="font-size: 40px;"></i>
+                                        </div>
+                                        <div class="p-4">
+                                            <a href=""></a>
+                                            <i class="fa fa-github" style="font-size: 40px;"></i>
+                                        </div>
+                                    </div>
+                                    </pre>
+
+                                </div>
+                            </div>
+                        </div> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-12  ">
+                            <div class="card text-center" style="width: fit-content;">
+                                <div class="card-body">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/INS_Vikramaditya_in_Baltic_Sea.jpg/330px-INS_Vikramaditya_in_Baltic_Sea.jpg"
+                                        width="400px" height="200px" class="img-fluid rounded-circle text-center "
+                                        alt="">
+                                    <br><br>
+                                    <h1 class="text-center" style="color: black;">LEO V.</h1>
+                                    <h3 class="text-center " style="color: black;">Content Designer</h3>
+                                    <p class="text-center" style="color: black;">Always ready to help you !!!</p>
+                                    <div class="d-flex flex-row justifycontent-center">
+                                        <div class="p-4">
+                                            <a href=""></a>
+                                            <i class="fa fa-facebook" style="font-size: 40px;"></i>
+                                        </div>
+                                        <div class="p-4">
+                                            <a href=""></a>
+                                            <i class="fa fa-twitter" style="font-size: 40px;  "></i>
+                                        </div>
+                                        <div class="p-4">
+                                            <a href=""></a>
+                                            <i class="fa fa-instagram" style="font-size: 40px;"></i>
+                                        </div>
+                                        <div class="p-4">
+                                            <a href=""></a>
+                                            <i class="fa fa-github" style="font-size: 40px;"></i>
+                                        </div>
+                                    </div>
+                                    </pre>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3"></div>
+        </div>
+    </section>
+    <footer>
+
+        <div class="container ">
+            <div class="row gx-10">
+                <div class="col">
+                    <div class="col-lg5 col-xs-12">
+                        <br>
+                        <img src="C:\Users\satya prakash\Desktop\jscript\task2\army gallary\1.jfif" alt="">
+
+
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="col-lg5 col-xs-12">
+                        <br>
+                        <p class="pr-5 text-black-50">
+                        <h3>Join Us</h3>
+                        </p>
+                        <ul class="social">
+                            <li><a href="https://www.facebook.com/vishaljethva1234/"><i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="https://youtube.com/channel/UCZl3bgyRrKKJXXIWW0GreUg"><i
+                                        class="fa fa-youtube"></i></a></li>
+                            <li><a href="#"><i class="fa fa-github"></i></a></li>
+                        </ul>
+                    </div>
+                </div>&emsp;&emsp;&emsp;
+                <div class="col">
+                    <div class="col-lg-3 col-xs-12 links"><br>
+                        <h3 class="mt-lg-0 mt-sm-3 ">Quick Links</h3>
+                        <ul class="m-0 p-0">
+                            <li><a class="btn-primary" href="https://indianarmy.nic.in/home">Source </a></li>
+                            <li><a class="btn-secondary" href="https://indianarmy.nic.in/home">Idea </a></li>
+
+
+                        </ul>
+                    </div>
+                </div>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                <div class="col">
+                    <div class="col-lg-4 col-xs-12 location">
+                        <h4 class="mt-lg-0 mt-sm-4"> &nbsp; Location</h4>
+                        <p><i class="fa fa-map-marker"> &nbsp; anuppur</i></p>
+                        <p><i class="fa fa-phone"> &nbsp; 9754164593</i></p>
+                        <p><i class="fa fa-envelope-o"> &nbsp; leohack@Gmail.com</i></p>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!--for crousel-->
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: jQuery, Popper.js, and Bootstrap JS
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+    -->
+
+    <!--for crousel-->
+
+</body>
+
+</html>
