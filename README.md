@@ -1,2 +1,3 @@
-# indianarmy.github.io
-#THIS IS MY FIRST PROJECT IN WEB DEV.
+
+# Indian Army
+## THIS IS MY FIRST PROJECT IN WEB DEV.
